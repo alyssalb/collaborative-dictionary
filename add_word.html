@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Add a New Word</h2>
+<form method="POST">
+  <div>
+    <label for="new_word">Word:</label>
+    <input type="text" name="new_word" id="new_word" required>
+  </div>
+  <div>
+    <label for="new_definition">Definition:</label>
+    <textarea name="new_definition" id="new_definition" required></textarea>
+  </div>
+  <button type="submit">Add Word</button>
+</form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Search for a Word</h2>
+{% if error_msg %}
+<p style="color:red;">{{ error_msg }}</p>
+{% endif %}
+<form method="POST">
+  <label>Enter a word or synonym:</label>
+  <input type="text" name="search_term" required>
+  <button type="submit">Search</button>
+</form>
+{% endblock %}

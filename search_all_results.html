@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Search Results for "{{ search_term }}"</h2>
+{% if results %}
+<ul>
+  {% for w in results %}
+    <li>
+      <a href="{{ url_for('show_definitions', word=w) }}">{{ w }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No results found.</p>
+{% endif %}
+{% endblock %}

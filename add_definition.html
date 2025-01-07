@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Add a Definition to an Existing Word</h2>
+<form method="POST">
+  <div>
+    <label for="existing_word">Existing Word:</label>
+    <input type="text" name="existing_word" id="existing_word" required>
+  </div>
+  <div>
+    <label for="new_definition">New Definition:</label>
+    <textarea name="new_definition" id="new_definition" required></textarea>
+  </div>
+  <button type="submit">Add Definition</button>
+</form>
+{% endblock %}

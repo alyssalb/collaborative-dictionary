@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Add Synonyms to an Existing Word</h2>
+<form method="POST">
+  <div>
+    <label>Existing Word:</label>
+    <input type="text" name="existing_word" required>
+  </div>
+  <div>
+    <label>Synonyms (comma separated):</label>
+    <input type="text" name="new_synonyms" required>
+  </div>
+  <button type="submit">Add Synonyms</button>
+</form>
+{% endblock %}
