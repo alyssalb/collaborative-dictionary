@@ -8,4 +8,4 @@ steps:
 
 # Instead of top-level logging, do this:
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: gs://collab-dict-bucket
