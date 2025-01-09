@@ -1,12 +1,11 @@
 steps:
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  entrypoint: 'bash'
-  args:
-    - '-c'
-    - |
-      gcloud app deploy app.yaml --quiet
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gcloud app deploy app.yaml --quiet
 
-serviceAccount: projects/PROJECT_ID/serviceAccounts/MY_SERVICE_ACCOUNT
-
-# Force logs to go only to Cloud Logging
-logging: CLOUD_LOGGING_ONLY
+# Instead of top-level logging, do this:
+options:
+  logging: CLOUD_LOGGING_ONLY
