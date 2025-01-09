@@ -5,6 +5,7 @@ steps:
       - '-c'
       - |
         gcloud app deploy app.yaml --quiet
+      
 
 # Instead of top-level logging, do this:
 options:
