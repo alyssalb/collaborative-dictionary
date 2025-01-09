@@ -4,9 +4,14 @@ steps:
     args:
       - '-c'
       - |
+        # Example: Deploy to App Engine
         gcloud app deploy app.yaml --quiet
-      
 
-# Instead of top-level logging, do this:
+serviceAccount: projects/PROJECT_ID/serviceAccounts/YOUR_SERVICE_ACCOUNT
+
+# This is how you specify a custom bucket for logs:
+logsBucket: gs://collab-dict-bucket
+
 options:
-  logging: gs://collab-dict-bucket
+  # logging is an enum if you want to set e.g. 'CLOUD_LOGGING_ONLY'
+  logging: GCS_ONLY
