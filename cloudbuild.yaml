@@ -1,19 +1,12 @@
-# cloudbuild.yaml
 steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'bash'
   args:
     - '-c'
     - |
-      # Install dependencies if needed (optional for App Engine Standard).
-      # For instance, pip install, or other setup steps.
-      # Usually not necessary if your app.yaml is set up for Python.
-
-      # Deploy to App Engine
       gcloud app deploy app.yaml --quiet
 
-# Optionally specify images if you want to push a Docker image, 
-# but for App Engine Standard (with app.yaml), that's not required.
-#
-# images:
-# - gcr.io/$PROJECT_ID/your-image-name
+serviceAccount: projects/PROJECT_ID/serviceAccounts/MY_SERVICE_ACCOUNT
+
+# Force logs to go only to Cloud Logging
+logging: CLOUD_LOGGING_ONLY
