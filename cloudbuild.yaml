@@ -7,7 +7,7 @@ steps:
         # Example: Deploy to App Engine
         gcloud app deploy app.yaml --quiet
 
-serviceAccount: projects/PROJECT_ID/serviceAccounts/YOUR_SERVICE_ACCOUNT
+serviceAccount: projects/genuine-range-447122-q5/serviceAccounts/alyssaservicecollabdict@genuine-range-447122-q5.iam.gserviceaccount.com
 
 # This is how you specify a custom bucket for logs:
 logsBucket: gs://collab-dict-bucket
